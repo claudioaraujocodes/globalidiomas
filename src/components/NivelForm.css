@@ -1,0 +1,201 @@
+.nivel-form-card {
+  --form-nav-blue: rgb(7, 67, 124);
+  --form-btn-primary: rgb(25, 99, 168);
+  --form-btn-hover: rgba(234, 6, 6, 0.8);
+  --form-border: #e0e0e0;
+  --form-text-muted: #666666;
+  --form-radius-card: 24px;
+  --form-radius-input: 8px;
+  --form-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--form-radius-card);
+  overflow: hidden;
+  box-shadow: var(--form-shadow);
+}
+
+.nivel-form-brand {
+  flex: 1;
+  min-width: 0;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 30% 70%, rgba(25, 99, 168, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 30%, rgba(7, 67, 124, 0.55) 0%, transparent 50%),
+    linear-gradient(145deg, #053648 0%, #021a24 45%, #010d12 100%);
+  border-radius: var(--form-radius-card) 0 0 var(--form-radius-card);
+}
+
+.nivel-form-brand h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  color: #fff;
+}
+
+.nivel-form-brand p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 280px;
+}
+
+.nivel-form-content {
+  flex: 1;
+  min-width: 0;
+  padding: 40px 48px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 var(--form-radius-card) var(--form-radius-card) 0;
+  overflow: visible;
+}
+
+.nivel-form-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #111;
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.nivel-form-subtitle {
+  font-size: 0.95rem;
+  color: var(--form-text-muted);
+  text-align: center;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.nivel-form-content .input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nivel-form-content .opt-sect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--form-border);
+}
+
+.nivel-form-content .opt-sect:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.nivel-form-content .opt-sect h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #222;
+  margin: 0;
+}
+
+.nivel-form-content .opt-change-sect {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nivel-form-content .opt-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--form-border);
+  border-radius: var(--form-radius-input);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.nivel-form-content .opt-box:hover {
+  border-color: var(--form-btn-primary);
+  background-color: rgba(25, 99, 168, 0.04);
+}
+
+.nivel-form-content .opt-box input[type="radio"],
+.nivel-form-content .opt-box input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--form-btn-primary);
+  cursor: pointer;
+}
+
+.nivel-form-content .opt-box label {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.45;
+  cursor: pointer;
+  margin: 0;
+}
+
+.nivel-form-content .opt-box:has(input:checked) {
+  border-color: var(--form-nav-blue);
+  background-color: rgba(7, 67, 124, 0.06);
+}
+
+@media (max-width: 900px) {
+  .nivel-form-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .nivel-form-brand {
+    padding: 36px 32px;
+    min-height: 160px;
+    border-radius: var(--form-radius-card) var(--form-radius-card) 0 0;
+  }
+
+  .nivel-form-brand p {
+    max-width: none;
+  }
+
+  .nivel-form-content {
+    padding: 32px 28px;
+    border-radius: 0 0 var(--form-radius-card) var(--form-radius-card);
+  }
+}
+
+@media (max-width: 480px) {
+  .nivel-form-card {
+    border-radius: 16px;
+  }
+
+  .nivel-form-brand {
+    padding: 24px 20px;
+    min-height: 120px;
+  }
+
+  .nivel-form-brand h2 {
+    font-size: 1.3rem;
+  }
+
+  .nivel-form-content {
+    padding: 24px 20px;
+  }
+
+  .nivel-form-title {
+    font-size: 1.45rem;
+  }
+
+  .nivel-form-content .opt-box {
+    padding: 10px 12px;
+  }
+}

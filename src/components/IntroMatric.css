@@ -1,0 +1,137 @@
+/* Cores do projeto (Home / Navbar) */
+.intro-matricula-card {
+  --form-nav-blue: rgb(7, 67, 124);
+  --form-btn-primary: rgb(25, 99, 168);
+  --form-border: #e0e0e0;
+  --form-text-muted: #666666;
+  --form-radius-card: 24px;
+  --form-radius-input: 8px;
+  --form-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--form-radius-card);
+  overflow: hidden;
+  box-shadow: var(--form-shadow);
+}
+
+.intro-matricula-brand {
+  flex: 1;
+  min-width: 0;
+  padding: 25px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(25, 99, 168, 0.45) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 20%, rgba(7, 67, 124, 0.6) 0%, transparent 50%),
+    linear-gradient(145deg, #053648 0%, #021a24 45%, #010d12 100%);
+  border-radius: var(--form-radius-card) 0 0 var(--form-radius-card);
+}
+
+.intro-matricula-brand h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0;
+  color: #fff;
+}
+
+.intro-matricula-brand p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 280px;
+}
+
+.intro-matricula-content {
+  flex: 1;
+  min-width: 0;
+  padding: 48px 56px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 var(--form-radius-card) var(--form-radius-card) 0;
+}
+
+.intro-matricula-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 20px;
+}
+
+.intro-matricula-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--form-text-muted);
+  margin: 0;
+  max-width: 360px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .intro-matricula-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .intro-matricula-brand {
+    padding: 36px 32px;
+    min-height: 180px;
+    border-radius: var(--form-radius-card) var(--form-radius-card) 0 0;
+  }
+
+  .intro-matricula-brand p {
+    max-width: none;
+  }
+
+  .intro-matricula-content {
+    padding: 40px 24px 60px 24px;
+    border-radius: 0 0 var(--form-radius-card) var(--form-radius-card);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .intro-matricula-card {
+    border-radius: 16px;
+  }
+
+  .intro-matricula-brand {
+    padding: 25px 24px;
+    min-height: 140px;
+  }
+
+  .intro-matricula-brand h2 {
+    font-size: 1.35rem;
+  }
+
+  .intro-matricula-content {
+
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+
+
+    padding: 10px 24px 40px 24px;
+
+    box-sizing: border-box;
+
+  }
+
+  .intro-matricula-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+
+  }
+}

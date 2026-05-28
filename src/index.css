@@ -1,0 +1,24 @@
+*{
+     font-family: "Roboto Condensed", sans-serif;
+     font-size: 1.05rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 700;
+}
+
+body {
+
+ display: flex; /* Transforma o corpo da página em um container flexbox */
+  flex-direction: column; /* Alinha os itens verticalmente */
+   /* Garante que o corpo ocupe 100% da altura da tela */
+  margin: 0; 
+
+
+     background: url("./img/ui2.png") no-repeat;
+     background-size: cover;
+
+      
+    /* background: linear-gradient(to bottom left, #fff, rgb(24, 121, 212));*/
+}

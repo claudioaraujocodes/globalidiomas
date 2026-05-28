@@ -1,0 +1,129 @@
+.outputform-card {
+  --form-nav-blue: rgb(7, 67, 124);
+  --form-btn-primary: rgb(25, 99, 168);
+  --form-border: #e0e0e0;
+  --form-text-muted: #666666;
+  --form-radius-card: 24px;
+  --form-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-radius: var(--form-radius-card);
+  overflow: hidden;
+  box-shadow: var(--form-shadow);
+}
+
+.outputform-brand {
+  flex: 1;
+  min-width: 0;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 40% 60%, rgba(25, 99, 168, 0.5) 0%, transparent 55%),
+    radial-gradient(ellipse at 60% 40%, rgba(7, 67, 124, 0.55) 0%, transparent 50%),
+    linear-gradient(145deg, #053648 0%, #021a24 45%, #010d12 100%);
+  border-radius: var(--form-radius-card) 0 0 var(--form-radius-card);
+}
+
+.outputform-brand h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+.outputform-brand p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 280px;
+}
+
+.outputform-content {
+  flex: 1;
+  min-width: 0;
+  padding: 48px 56px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 var(--form-radius-card) var(--form-radius-card) 0;
+}
+
+.outputform-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 24px;
+}
+
+.outputform-message {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--form-text-muted);
+  margin: 0 0 14px;
+  max-width: 380px;
+}
+
+.outputform-message:last-child {
+  margin-bottom: 0;
+}
+
+.outputform-message strong {
+  color: var(--form-nav-blue);
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .outputform-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .outputform-brand {
+    padding: 36px 32px;
+    min-height: 160px;
+    border-radius: var(--form-radius-card) var(--form-radius-card) 0 0;
+  }
+
+  .outputform-brand p {
+    max-width: none;
+  }
+
+  .outputform-content {
+    padding: 36px 32px;
+    border-radius: 0 0 var(--form-radius-card) var(--form-radius-card);
+  }
+}
+
+@media (max-width: 480px) {
+  .outputform-card {
+    border-radius: 16px;
+  }
+
+  .outputform-brand {
+    padding: 24px 20px;
+    min-height: 120px;
+  }
+
+  .outputform-brand h2 {
+    font-size: 1.3rem;
+  }
+
+  .outputform-content {
+    padding: 28px 24px;
+  }
+
+  .outputform-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,105 @@
+.autoplay-container {
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+
+}
+
+.photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0;
+    /* Espaço para o ícone absoluto no topo e as bolinhas de paginação */
+    box-sizing: border-box;
+}
+
+.inter-slide-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 260px;
+
+
+
+    /* Mantém o tamanho do quadro sob controle */
+    aspect-ratio: 1 / 1;
+    /* Força o quadro a ser um quadrado perfeito */
+    background-color: rgb(7, 67, 124);
+    /* Azul de navegação do projeto */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+}
+
+.icon-upper-box {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgb(25, 99, 168);
+    /* Azul do botão primário */
+    border-radius: 50%;
+    border: 3px solid #fff;
+    /* Contorno branco elegante */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    z-index: 3;
+}
+
+.inter-slide-box h3 {
+    margin: 15px 0 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fff;
+    z-index: 2;
+}
+
+.inter-slide-box p {
+    margin: 8px 0 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+}
+
+.inter-slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.38);
+    /* Camada preta transparente mais clara sobre a foto */
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Customização dos controles do Swiper */
+.autoplay-container .swiper-pagination-bullet-active {
+    background-color: rgb(7, 67, 124) !important;
+}
+
+.autoplay-container .swiper-button-next,
+.autoplay-container .swiper-button-prev {
+    color: rgb(7, 67, 124) !important;
+    transform: scale(0.8);
+}

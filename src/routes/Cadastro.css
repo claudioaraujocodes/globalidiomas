@@ -1,0 +1,166 @@
+.cadastro-page-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cadastro-banner {
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  /* Alinha abaixo da barra de navegação fixed */
+  height: 14vh;
+  min-height: 110px;
+  max-height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+}
+
+.cadastro-banner .banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.55));
+  z-index: 1;
+}
+
+.cadastro-banner .banner-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.cadastro-banner .banner-content h1 {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.cad-container {
+  width: 100%;
+  min-height: 750px;
+  padding: 40px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.cad-container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formstep-container {
+  width: 100%;
+  max-width: 920px;
+  min-height: auto;
+  height: auto;
+}
+
+/* Desktop: mesma largura em todas as etapas */
+@media (min-width: 901px) {
+  .formstep-container {
+    width: 920px;
+    max-width: 920px;
+    flex-shrink: 0;
+  }
+
+  .formstep-container>* {
+    width: 100%;
+    min-height: 520px;
+  }
+
+  /* Nivelamento: altura conforme o conteúdo; rolagem fica na página */
+  .formstep-container>.nivel-form-card {
+    min-height: auto;
+    align-self: stretch;
+  }
+}
+
+.actions {
+  display: flex;
+  margin-top: 32px;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+  gap: 20px;
+  background-color: transparent;
+}
+
+.actions button {
+  display: flex;
+  min-width: 120px;
+  height: 40px;
+  padding: 0 28px;
+  background-color: rgb(25, 99, 168);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: rgba(234, 6, 6, 0.8);
+}
+
+@media (max-width: 600px) {
+  .cad-container {
+    padding: 30px 16px 60px;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 280px;
+  }
+
+  .actions button {
+    flex: 1;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .cadastro-banner {
+    height: 12vh;
+    min-height: 100px;
+    max-height: 130px;
+  }
+
+  .cadastro-banner .banner-content h1 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cadastro-banner {
+    height: 90px;
+    min-height: 90px;
+  }
+
+  .cadastro-banner .banner-content h1 {
+    font-size: 1.2rem;
+  }
+}
