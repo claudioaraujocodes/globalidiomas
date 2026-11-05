@@ -2,7 +2,7 @@ import "./Contato.css";
 import salvadorPostcard from "../img/salvador_postcard.webp";
 import saopauloPostcard from "../img/saopaulo_postcard.webp";
 import rioPostcard from "../img/rio_postcard.webp";
-import languagesBanner from "../img/banner_nivel2.png";
+import languagesBanner from "../img/banner_nivel2.webp";
 
 const Contato = () => {
   return (

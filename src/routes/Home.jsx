@@ -16,7 +16,7 @@ import elasticMan3 from "../img/elastic_man3.webp";
 
 
 import "./Home.css";
-import urbanMapBanner from "../img/languages_banner.png";
+import urbanMapBanner from "../img/languages_banner.webp";
 
 // Objeto contendo os dados e imagens dos boxes interativos divididos por idioma.
 

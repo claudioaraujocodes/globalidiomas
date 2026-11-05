@@ -10,7 +10,7 @@ import { DataContext } from "../context/DataContext";
 import "./Cadastro.css";
 
 // Importa as imagens para o banner responsivo de cada passo
-import bannerNivel2 from "../img/banner_nivel2.png";
+import bannerNivel2 from "../img/banner_nivel2.webp";
 
 // Índice da etapa "Dados Pessoais" depois de dividir o Nivelamento em 2 telas
 const USER_DATA_STEP_INDEX = 3;
