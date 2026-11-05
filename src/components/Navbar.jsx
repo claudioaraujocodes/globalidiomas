@@ -1,9 +1,26 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const handleNavClick = (targetPath, e) => {
+    const current = location.pathname.replace(/\/+$/, "") || "/";
+    const target = targetPath.replace(/\/+$/, "") || "/";
+
+    if (current === target) {
+      if (e) e.preventDefault();
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      document.documentElement.scrollTo?.({ top: 0, left: 0, behavior: "smooth" });
+    } else {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    }
+    setMenuOpen(false);
+  };
 
   return (
     <>
@@ -11,13 +28,27 @@ const Navbar = () => {
         <div className="navbar">
           <div className="nav-items">
             <div className="logo">
-              <Link to={"/"}>GLOBAL</Link>
+              <Link to={"/"} onClick={(e) => handleNavClick("/", e)}>
+                GLOBAL
+              </Link>
             </div>
 
             <ul className="menu-links">
-              <li><Link to={"/"}>Cursos</Link></li>
-              <li><Link to={"/cadastro"}>Matriculas</Link></li>
-              <li><Link to={"/contato"}>Contato</Link></li>
+              <li>
+                <Link to={"/"} onClick={(e) => handleNavClick("/", e)}>
+                  Cursos
+                </Link>
+              </li>
+              <li>
+                <Link to={"/cadastro"} onClick={(e) => handleNavClick("/cadastro", e)}>
+                  Matriculas
+                </Link>
+              </li>
+              <li>
+                <Link to={"/contato"} onClick={(e) => handleNavClick("/contato", e)}>
+                  Contato
+                </Link>
+              </li>
             </ul>
 
             <button 
@@ -42,9 +73,21 @@ const Navbar = () => {
           &times;
         </button>
         <ul className="slide-menu-links">
-          <li><Link to={"/"} onClick={() => setMenuOpen(false)}>Cursos</Link></li>
-          <li><Link to={"/cadastro"} onClick={() => setMenuOpen(false)}>Matriculas</Link></li>
-          <li><Link to={"/contato"} onClick={() => setMenuOpen(false)}>Contato</Link></li>
+          <li>
+            <Link to={"/"} onClick={(e) => handleNavClick("/", e)}>
+              Cursos
+            </Link>
+          </li>
+          <li>
+            <Link to={"/cadastro"} onClick={(e) => handleNavClick("/cadastro", e)}>
+              Matriculas
+            </Link>
+          </li>
+          <li>
+            <Link to={"/contato"} onClick={(e) => handleNavClick("/contato", e)}>
+              Contato
+            </Link>
+          </li>
         </ul>
       </div>
 
