@@ -1,4 +1,4 @@
-# Global Idiomas — Website Institucional & Matrícula Online
+# Global Idiomas - Website Institucional & Matrícula Online
 
 > Website institucional moderno desenvolvido com **React 19** e **Vite** para a rede de cursos **Global Idiomas**, presente em três capitais brasileiras (**Salvador**, **São Paulo** e **Rio de Janeiro**). Desenvolvido para apresentar a grade de cursos (**Inglês**, **Espanhol** e **Mandarim**), a rede de unidades físicas e oferecer um funil interativo de nivelamento e matrícula online em múltiplas etapas (*Multi-Step Wizard*), aliando navegação fluida via **React Router v7** e gerenciamento de estado unificado com **Context API**.
 
@@ -87,7 +87,6 @@ Este projeto foi desenvolvido aplicando padrões sólidos de desenvolvimento fro
 ```text
 ├── public/                     # Assets estáticos e favicon vetorial em globo (favicon.svg)
 ├── src/
-│   ├── assets/                 # Recursos gráficos vetoriais (SVGs)
 │   ├── components/             # Componentes modulares e reutilizáveis da interface
 │   │   ├── CarrosselAutoplay.jsx / .css  # Slider responsivo com autoplay via Swiper.js
 │   │   ├── Footer.jsx / .css             # Rodapé com links e dados institucionais
