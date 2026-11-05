@@ -9,15 +9,15 @@ import 'swiper/css/autoplay';
 import "./CarrosselAutoplay.css";
 
 // Importa as fotos/imagens locais que estão na pasta src/img
-import img1 from "../img/img1.png";
-import img2 from "../img/img2.png";
-import img3 from "../img/img3.png";
-import img4 from "../img/img4.png";
-import img5 from "../img/img5.png";
-import img6 from "../img/img6.png";
-import img7 from "../img/img7.png";
-import img8 from "../img/img8.png";
-import img9 from "../img/img9.png";
+import img1 from "../img/img1.webp";
+import img2 from "../img/img2.webp";
+import img3 from "../img/img3.webp";
+import img4 from "../img/img4.webp";
+import img5 from "../img/img5.webp";
+import img6 from "../img/img6.webp";
+import img7 from "../img/img7.webp";
+import img8 from "../img/img8.webp";
+import img9 from "../img/img9.webp";
 
 // Módulos de navegação, paginação e autoplay do Swiper
 import { Navigation, Pagination, Autoplay } from "swiper/modules";

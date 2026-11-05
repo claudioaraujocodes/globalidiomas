@@ -1,8 +1,8 @@
 import "./Contato.css";
-import salvadorPostcard from "../img/salvador_postcard.png";
-import saopauloPostcard from "../img/saopaulo_postcard.png";
-import rioPostcard from "../img/rio_postcard.png";
-import languagesBanner from "../img/languages_banner.png";
+import salvadorPostcard from "../img/salvador_postcard.webp";
+import saopauloPostcard from "../img/saopaulo_postcard.webp";
+import rioPostcard from "../img/rio_postcard.webp";
+import languagesBanner from "../img/banner_nivel2.png";
 
 const Contato = () => {
   return (

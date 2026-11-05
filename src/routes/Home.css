@@ -117,25 +117,15 @@ a.bt-slide:hover {
 
 section {
     width: 100%;
-
-
 }
-
 
 .cursos-img {
-
     display: flex;
     flex-direction: column;
-
-
     max-width: 1280px;
-
     margin: 0 auto;
     margin-top: 20px;
-
-
 }
-
 
 
 .espanhol,
@@ -169,7 +159,7 @@ section {
     background-color: antiquewhite;
     border-radius: 10px;
     cursor: pointer;
-    /* Delay the contraction by 0.25s so content can fade out completely first */
+
     transition:
         flex var(--box-elastic-duration) var(--box-elastic-ease) 0.25s,
         flex-grow var(--box-elastic-duration) var(--box-elastic-ease) 0.25s,
@@ -180,7 +170,7 @@ section {
     position: relative;
 }
 
-/* Expand delay 0.25s to let the collapsing box's content hide first */
+
 .box.flex2 {
     flex: 2;
     transition:
@@ -191,7 +181,7 @@ section {
         max-height var(--box-elastic-duration) var(--box-elastic-ease) 0.25s;
 }
 
-/* Content Box: space opens/closes instantly at the end of the sequence */
+
 .content-box {
     margin-top: auto;
     /* Empurra o conteúdo para o fundo da box */
@@ -217,29 +207,27 @@ section {
         padding 0s ease 0.90s;
 }
 
-/* Children Staggered Transitions (Desktop and Mobile) */
 
-/* Texts (h3, p) fade out with 0.1s delay (after button) */
 .content-box h3,
 .content-box p {
     opacity: 0;
     transition: opacity 0.15s ease 0.1s;
 }
 
-/* Button fades out immediately */
+
 .btn-cur-box {
     opacity: 0;
     transition: opacity 0.1s ease 0s;
 }
 
-/* Texts (h3, p) fade in after box expands (0.90s delay) */
+
 .box.flex2 .content-box h3,
 .box.flex2 .content-box p {
     opacity: 1;
     transition: opacity 0.3s ease 0.90s;
 }
 
-/* Button fades in after texts fade in (1.20s delay) */
+
 .box.flex2 .btn-cur-box {
     opacity: 1;
     transition: opacity 0.25s ease 1.20s;
@@ -330,8 +318,6 @@ a.bt-slide {
 
 /*section 2*/
 
-
-
 .sect2-container {
     display: flex;
     flex-direction: column;
@@ -378,14 +364,14 @@ a.bt-slide {
 
 }
 
-/* Botão de idioma ativo (referência CCAA mobile) */
+/* Botão de idioma ativo */
 .btns-cursos .bt.active {
     background-color: rgb(7, 67, 124);
     box-shadow: 0 4px 12px rgba(7, 67, 124, 0.35);
 }
 
 /* =============================================================================
-   RESPONSIVO — boxes elásticas (tablet e celular, referência CCAA imagem 3)
+   RESPONSIVO — boxes elásticas (tablet e celular)
    Desktop: flex-direction row + flex1/flex2 na horizontal (hover).
    Mobile: flex-direction column + acordeão vertical (toque via handleClick).
    ============================================================================= */
@@ -393,20 +379,14 @@ a.bt-slide {
 
 @media(max-width: 1280px) {
 
-
-
     .espanhol,
     .ingles,
     .mandarim {
         padding: 40px;
-
     }
-
-
 
     .sect2-container {
         padding: 40px;
-
     }
 
 }
@@ -479,7 +459,6 @@ a.bt-slide {
     }
 
     .curso-elastic-panel {
-        /* transition height matches total transition time (0.65s duration + 0.25s delay = 0.90s) */
         transition: height 0.9s var(--box-elastic-ease);
     }
 
@@ -497,7 +476,7 @@ a.bt-slide {
         flex-shrink: 0;
     }
 
-    /* Retraída: faixa estreita (rótulo img2 / img3 visível) - increased for tablets */
+    /* Retraída: faixa estreita (rótulo img2 / img3 visível) - increased tablets */
     .box.flex1 {
         flex: 0 0 140px;
         min-height: 160px;
@@ -546,14 +525,8 @@ a.bt-slide {
 
     .sect2-container {
         margin-top: 48px;
-
         padding: 0px;
-
-
     }
-
-
-
 
 
     .sect2 {
@@ -627,37 +600,3 @@ a.bt-slide {
         margin-top: 24px;
     }
 }
-
-/*
-
-.grid {
-
-display: grid;
-grid-template: 100% / 1fr 1fr 1fr;
-    width: 100%;
-    height: 450px;
-    
-    gap: 15px;
-
-}
-
-.grid-item {
-    border-radius: 20px;
-    min-width: 250px;
-}
-
-.item1 {
-    background-image: url("../img/ing1.jpg");
-    background-size: cover;
-    background-position: center; 
-}
-
-.item2 {
-    background-color: green;
-}
-
-.item3 {
-    background-color: yellow;
-}
-
-*/

@@ -1,4 +1,5 @@
 import { useState, useRef, useContext } from "react";
+import { useNavigate } from "react-router-dom"; // Import do hook de navegação
 import IntroMatric from "../components/IntroMatric";
 import NivelFormStep1 from "../components/NivelFormStep1";
 import NivelFormStep2 from "../components/NivelFormStep2";
@@ -11,19 +12,12 @@ import "./Cadastro.css";
 // Importa as imagens para o banner responsivo de cada passo
 import bannerNivel2 from "../img/banner_nivel2.png";
 
-// Dicionário de banners indexados pelo passo do formulário
-const STEP_BANNERS = [
-  bannerNivel2, // IntroMatric
-  bannerNivel2, // NivelFormStep1
-  bannerNivel2, // NivelFormStep2
-  bannerNivel2, // UserDataForm
-  bannerNivel2  // OutputForm
-];
-
 // Índice da etapa "Dados Pessoais" depois de dividir o Nivelamento em 2 telas
 const USER_DATA_STEP_INDEX = 3;
 
 const Cadastro = () => {
+  const navigate = useNavigate(); // Instância do navegador
+
   const formSteps = [
     <IntroMatric />,
     <NivelFormStep1 />,
@@ -35,28 +29,23 @@ const Cadastro = () => {
   const { dataState } = useContext(DataContext);
 
   const useFormSteps = (formSteps) => {
-    const [currentStep, setCurrentStep] = useState(0)
+    const [currentStep, setCurrentStep] = useState(0);
 
     function changeStep(step, e) {
-
       if (e) e.preventDefault();
 
       if (step < 0 || step >= formSteps.length) return;
       setCurrentStep(step);
-
     }
 
     return {
       currentStep,
       currentComponent: formSteps[currentStep],
       changeStep,
-      isLastStep: currentStep + 1 === formSteps.length ? true : false,
-      isFirstStep: currentStep === 0 ? true : false,
-
-    }
-
-
-  }
+      isLastStep: currentStep + 1 === formSteps.length,
+      isFirstStep: currentStep === 0,
+    };
+  };
 
   const { currentStep, currentComponent, changeStep, isLastStep, isFirstStep } = useFormSteps(formSteps);
 
@@ -104,7 +93,7 @@ const Cadastro = () => {
     <div className="cadastro-page-container">
       <div 
         className="cadastro-banner" 
-        style={{ backgroundImage: `url(${STEP_BANNERS[currentStep]})` }}
+        style={{ backgroundImage: `url(${bannerNivel2})` }}
       >
         <div className="banner-overlay"></div>
         <div className="banner-content">
@@ -120,19 +109,26 @@ const Cadastro = () => {
         </form>
 
         <div className="actions">
-          {!isFirstStep && (
-            <button type="button" onClick={() => changeStep(currentStep - 1)}>Voltar</button>
-          )}
-
           {isLastStep ? (
-            <button type="button" onClick={(e) => changeStep(currentStep + 1, e)}>Enviar</button>
+            <button type="button" onClick={() => navigate("/")}>
+              Home
+            </button>
           ) : (
-            <button type="button" onClick={handleNext}>Proximo</button>
+            <>
+              {!isFirstStep && (
+                <button type="button" onClick={() => changeStep(currentStep - 1)}>
+                  Voltar
+                </button>
+              )}
+              <button type="button" onClick={handleNext}>
+                Próximo
+              </button>
+            </>
           )}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Cadastro
+export default Cadastro;

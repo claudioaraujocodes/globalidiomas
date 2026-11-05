@@ -5,21 +5,12 @@
 }
 
 .app-container {
-  
+
   display: flex;
   flex-direction: column;
   width: 100%;
-  
-  
-  
-  
-}
-/*
-.container {
 
-  background-image: url("./img/bg4.jpg");
-  background-size: cover;
-   background-position: center;  
-}
 
-*/
+
+
+}
